@@ -1,0 +1,101 @@
+[{
+  "_id": {
+    "$oid": "698d874543eb69119e61dc4f"
+  },
+  "user": {
+    "$oid": "698d71680094f2ac16a3d683"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "698d7ad98d76b787ad8f3d9e"
+      },
+      "name": "Sony WH-1000XM5 Headphones",
+      "price": 399,
+      "quantity": 2,
+      "lineTotal": 798
+    },
+    {
+      "product": {
+        "$oid": "698d799871d8a393aa62d2b8"
+      },
+      "name": "iPhone 15",
+      "price": 1200,
+      "quantity": 1,
+      "lineTotal": 1200
+    }
+  ],
+  "totalAmount": 1998,
+  "status": "PENDING",
+  "cancelledAt": null,
+  "cancelReason": "",
+  "createdAt": {
+    "$date": "2026-02-12T07:54:45.015Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-12T07:54:45.015Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698d887c43eb69119e61dc57"
+  },
+  "user": {
+    "$oid": "698d71680094f2ac16a3d683"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "698d7ae08d76b787ad8f3da1"
+      },
+      "name": "Samsung Galaxy S23",
+      "price": 999,
+      "quantity": 5,
+      "lineTotal": 4995
+    }
+  ],
+  "totalAmount": 4995,
+  "status": "PENDING",
+  "cancelledAt": null,
+  "cancelReason": "",
+  "createdAt": {
+    "$date": "2026-02-12T07:59:56.602Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-12T07:59:56.602Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698d889a43eb69119e61dc5b"
+  },
+  "user": {
+    "$oid": "698d71680094f2ac16a3d683"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "698d7aff8d76b787ad8f3da7"
+      },
+      "name": "Logitech MX Master 3 Mouse",
+      "price": 120,
+      "quantity": 3,
+      "lineTotal": 360
+    }
+  ],
+  "totalAmount": 360,
+  "status": "CANCELLED",
+  "cancelledAt": {
+    "$date": "2026-02-12T08:07:57.371Z"
+  },
+  "cancelReason": "User cancelled",
+  "createdAt": {
+    "$date": "2026-02-12T08:00:26.599Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-12T08:07:57.376Z"
+  },
+  "__v": 0
+}]

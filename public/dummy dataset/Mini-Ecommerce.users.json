@@ -1,0 +1,212 @@
+[{
+  "_id": {
+    "$oid": "698d6e260094f2ac16a3d671"
+  },
+  "userName": "Admin One",
+  "email": "admin1@appify.com",
+  "password": "$2b$10$SbUlRrZc10M7.larXNCfwu5LY4B9E.QQGpDlEO5wQfQQH2HMOPsXu",
+  "role": "admin",
+  "blockedUntil": null,
+  "cancelCount24h": 0,
+  "cancelCount7d": 0,
+  "lastCancelAt": null,
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-02-12T06:07:34.644Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-12T06:07:34.644Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698d710e0094f2ac16a3d67b"
+  },
+  "userName": "Admin Two",
+  "email": "admin2@appify.com",
+  "password": "$2b$10$lcqGfjFTz1PpJJLxedjwBeuZQOqGYnvJSRzSXt0eZewnMSpbbxEkq",
+  "role": "admin",
+  "blockedUntil": null,
+  "cancelCount24h": 0,
+  "cancelCount7d": 0,
+  "lastCancelAt": null,
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-02-12T06:19:58.057Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-12T06:19:58.057Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698d712d0094f2ac16a3d67f"
+  },
+  "userName": "Admin Three",
+  "email": "admin3@appify.com",
+  "password": "$2b$10$Oz9juKn7/saL.v3tAJQ5QeGcQGU4AVkXd7ZoonvknOFTcwiqd227q",
+  "role": "admin",
+  "blockedUntil": null,
+  "cancelCount24h": 0,
+  "cancelCount7d": 0,
+  "lastCancelAt": null,
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-02-12T06:20:29.422Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-12T06:20:29.422Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698d71680094f2ac16a3d683"
+  },
+  "userName": "Rahim Ahmed",
+  "email": "rahim@gmail.com",
+  "password": "$2b$10$vfT7GXn444GGNOUvIgeZiOSgJUmWVTOH5cfTNUbShfSz4eEU/QIcy",
+  "role": "customer",
+  "blockedUntil": null,
+  "cancelCount24h": 1,
+  "cancelCount7d": 1,
+  "lastCancelAt": {
+    "$date": "2026-02-12T08:07:57.385Z"
+  },
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-02-12T06:21:28.129Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-12T08:07:57.387Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698d716f0094f2ac16a3d687"
+  },
+  "userName": "Karim Hossain",
+  "email": "karim@gmail.com",
+  "password": "$2b$10$j42SoFlX7W.9uH.niTPV9.BRNGvUmP.bFSlb8er9yjgNNqM5ltvsy",
+  "role": "customer",
+  "blockedUntil": null,
+  "cancelCount24h": 0,
+  "cancelCount7d": 0,
+  "lastCancelAt": null,
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-02-12T06:21:35.124Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-12T06:21:35.124Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698d71780094f2ac16a3d68b"
+  },
+  "userName": "Salma Akter",
+  "email": "salma@gmail.com",
+  "password": "$2b$10$b/gOeZ9LZODRAuMZbcGxjO4j9ebgAXmGTHsmqMzhtLtblsqiZUybW",
+  "role": "customer",
+  "blockedUntil": null,
+  "cancelCount24h": 0,
+  "cancelCount7d": 0,
+  "lastCancelAt": null,
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-02-12T06:21:44.409Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-12T06:21:44.409Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698d77aaae50dc0184c15355"
+  },
+  "userName": "Mazed Admin",
+  "email": "mazed@appify.com",
+  "password": "$2b$10$24YMOyzAOuCDSy3v3XSVDeFTVllRZdtCw4gLWUkoLlKIGdsg5vDpa",
+  "role": "admin",
+  "blockedUntil": null,
+  "cancelCount24h": 0,
+  "cancelCount7d": 0,
+  "lastCancelAt": null,
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-02-12T06:48:10.652Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-12T06:48:10.652Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698d79c271d8a393aa62d2bb"
+  },
+  "userName": "Mazed",
+  "email": "mazed@gmail.com",
+  "password": "$2b$10$CRuBW2qk.NC78a.RnpnyrOCYB0JuanlLixt06jHT2g8q7gTol0/Hu",
+  "role": "customer",
+  "blockedUntil": null,
+  "cancelCount24h": 0,
+  "cancelCount7d": 0,
+  "lastCancelAt": null,
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-02-12T06:57:06.207Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-12T06:57:06.207Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698d79fd56c7917553a9e154"
+  },
+  "userName": "Mazed1",
+  "email": "mazed1@gmail.com",
+  "password": "$2b$10$ZBtzQYS6oZCmHS7fs8yfIuO71EpubBzE8cchBxZPBdDzg1YlyEGna",
+  "role": "customer",
+  "blockedUntil": null,
+  "cancelCount24h": 0,
+  "cancelCount7d": 0,
+  "lastCancelAt": null,
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-02-12T06:58:05.814Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-12T06:58:05.814Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698d7a814b34c0ef34e5588e"
+  },
+  "userName": "Mazed3",
+  "email": "mazed3@gmail.com",
+  "password": "$2b$10$zdThJcGt24liK0K/.PsyHe5gvW8U8Gn7sD15quNMCiTpqzDsh1vJC",
+  "role": "admin",
+  "blockedUntil": null,
+  "cancelCount24h": 0,
+  "cancelCount7d": 0,
+  "lastCancelAt": null,
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-02-12T07:00:17.290Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-12T07:00:17.290Z"
+  },
+  "__v": 0
+}]

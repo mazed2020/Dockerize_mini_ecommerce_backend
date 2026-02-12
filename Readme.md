@@ -49,7 +49,7 @@ built using **Node.js**, **Express.js**, and **MongoDB**.
 
    │
 ├── node_modules/
-├── public/
+├── public/dummydataset
 ├── src/
 │ ├── controllers/
 │ ├── db/
@@ -94,7 +94,7 @@ REFRESH_TOKEN_EXPIRE=1d
  
 ```
 
-⚠ Never commit your `.env` file to GitHub.
+ 
 
 ------------------------------------------------------------------------
 

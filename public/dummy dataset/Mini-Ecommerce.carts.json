@@ -1,0 +1,28 @@
+[{
+  "_id": {
+    "$oid": "698d9779e601ec8f689404f2"
+  },
+  "user": {
+    "$oid": "698d71680094f2ac16a3d683"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "698d7b048d76b787ad8f3daa"
+      },
+      "quantity": 5,
+      "name": "Sony WH-1000XM5 Headphones",
+      "price": 500,
+      "lineTotal": 2500
+    }
+  ],
+  "totalItems": 5,
+  "totalAmount": 2500,
+  "createdAt": {
+    "$date": "2026-02-12T09:03:53.538Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-12T09:07:20.062Z"
+  },
+  "__v": 5
+}]
