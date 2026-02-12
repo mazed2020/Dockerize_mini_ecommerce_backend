@@ -42,6 +42,7 @@ built using **Node.js**, **Express.js**, and **MongoDB**.
 -   Cloudinary
 -   dotenv
 -   Nodemon
+-   multer
 
 ------------------------------------------------------------------------
 

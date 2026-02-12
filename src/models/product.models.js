@@ -35,7 +35,12 @@ const ProductSchema = new mongoose.Schema(
       default: true,
       index: true
     },
-
+    imageUrls: [
+      {
+        type: String,
+        trim: true,
+      },
+    ],
      
     createdBy: {
       type: mongoose.Schema.Types.ObjectId,

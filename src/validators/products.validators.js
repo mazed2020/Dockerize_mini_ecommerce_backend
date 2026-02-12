@@ -8,6 +8,7 @@ export const createProductSchema = z.object({
     price: z.number().nonnegative(),
     stock: z.number().int().nonnegative(),
     isActive: z.boolean().optional(),
+    imageUrls: z.array(z.string().url()).max(5).optional()
   }),
 });
 
@@ -21,6 +22,8 @@ export const updateProductSchema = z.object({
     price: z.number().nonnegative().optional(),
     stock: z.number().int().nonnegative().optional(),
     isActive: z.boolean().optional(),
+    imageUrls: z.array(z.string().url()).max(5).optional()
+
   }),
 });
 

@@ -82,4 +82,115 @@
     "$date": "2026-02-12T07:31:06.065Z"
   },
   "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698dbb39fb4c4ced89fea55f"
+  },
+  "name": "Apple iPhone 15",
+  "description": "Latest Apple smartphone with A16 chip and dynamic island display.",
+  "price": 1199,
+  "stock": 40,
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-02-12T11:36:25.690Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-12T11:36:25.690Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698dbeba7a305b333c2cdb11"
+  },
+  "name": "drinking wates",
+  "description": "latest waters in market",
+  "price": 1500,
+  "stock": 100,
+  "isActive": true,
+  "imageUrls": [
+    "https://res.cloudinary.com/dr3lsbx2k/image/upload/v1770897079/ni7zjckih5g9vypoxagr.jpg",
+    "https://res.cloudinary.com/dr3lsbx2k/image/upload/v1770897081/na0xlxksatvh2kwooxtp.jpg"
+  ],
+  "createdBy": {
+    "$oid": "698d6e260094f2ac16a3d671"
+  },
+  "createdAt": {
+    "$date": "2026-02-12T11:51:22.143Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-12T11:51:22.143Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698dbfce655937cb119a8be6"
+  },
+  "name": "Apple iPhone 15 Pro",
+  "description": "Latest Apple flagship smartphone with A17 chip and ProMotion display.",
+  "price": 1299,
+  "stock": 25,
+  "isActive": true,
+  "imageUrls": [
+    "https://images.unsplash.com/photo-1695048133142-1a20484bce71",
+    "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9"
+  ]
+},
+{
+  "_id": {
+    "$oid": "698dbfce655937cb119a8be7"
+  },
+  "name": "Samsung Galaxy S23 Ultra",
+  "description": "High-performance Android smartphone with 200MP camera and AMOLED display.",
+  "price": 1199,
+  "stock": 30,
+  "isActive": true,
+  "imageUrls": [
+    "https://images.unsplash.com/photo-1678911820864-e8a9d3e4b08c",
+    "https://images.unsplash.com/photo-1603791440384-56cd371ee9a7"
+  ]
+},
+{
+  "_id": {
+    "$oid": "698dbfce655937cb119a8be8"
+  },
+  "name": "Sony WH-1000XM5 Headphones",
+  "description": "Premium noise-cancelling wireless headphones with 30-hour battery life.",
+  "price": 399,
+  "stock": 50,
+  "isActive": true,
+  "imageUrls": [
+    "https://images.unsplash.com/photo-1585386959984-a41552262e6b",
+    "https://images.unsplash.com/photo-1518449030719-60b9e6d7f1e4"
+  ]
+},
+{
+  "_id": {
+    "$oid": "698dbfce655937cb119a8be9"
+  },
+  "name": "Apple MacBook Air M2",
+  "description": "Lightweight laptop powered by Apple M2 chip with 13.6-inch Retina display.",
+  "price": 1499,
+  "stock": 15,
+  "isActive": true,
+  "imageUrls": [
+    "https://images.unsplash.com/photo-1517336714731-489689fd1ca8",
+    "https://images.unsplash.com/photo-1492724441997-5dc865305da7"
+  ]
+},
+{
+  "_id": {
+    "$oid": "698dbfce655937cb119a8bea"
+  },
+  "name": "Logitech MX Master 3S Mouse",
+  "description": "Advanced wireless mouse with ergonomic design and ultra-fast scrolling.",
+  "price": 99,
+  "stock": 75,
+  "isActive": true,
+  "imageUrls": [
+    "https://images.unsplash.com/photo-1587829741301-dc798b83add3",
+    "https://images.unsplash.com/photo-1587202372775-e229f172b9d7"
+  ]
 }]

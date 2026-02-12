@@ -3,7 +3,7 @@ import { Product } from "../models/product.models.js";
 import ApiResponse from "../utils/apiRespose.js";
 import ApiError from "../utils/apiErrorHandler.js";
 import { asyncHandler } from "../utils/asyncHandler.js";
-
+import uploadOnCloudinary from "../utils/cloudinary.js"
 // GET /getAllProducts
 export const getAllProducts = asyncHandler(async (req, res) => {
   const products = await Product.find({}).sort({ createdAt: -1 });
@@ -33,8 +33,9 @@ export const getProductById = asyncHandler(async (req, res) => {
 });
 
 // POST /createProduct  (Admin)
+ 
 export const createProduct = asyncHandler(async (req, res) => {
-  const { name, description, price, stock } = req.body;
+  const { name, description, price, stock, isActive } = req.body;
 
   if (!name || price === undefined || stock === undefined) {
     throw new ApiError(400, "name, price and stock are required");
@@ -48,11 +49,26 @@ export const createProduct = asyncHandler(async (req, res) => {
     throw new ApiError(400, "stock cannot be negative");
   }
 
+  // ✅ Upload images to Cloudinary
+  const imageUrls = [];
+
+  if (req.files?.length) {
+    for (const file of req.files) {
+      const uploaded = await uploadOnCloudinary(file.path);
+      if (uploaded?.secure_url) {
+        imageUrls.push(uploaded.secure_url);
+      }
+    }
+  }
+
   const product = await Product.create({
     name,
     description: description || "",
     price: Number(price),
     stock: Number(stock),
+    isActive: isActive === "true" || isActive === true,
+    imageUrls,               // ✅ save array
+    createdBy: req.user?._id // if using requireAuth
   });
 
   res.status(201).json(
@@ -60,7 +76,9 @@ export const createProduct = asyncHandler(async (req, res) => {
   );
 });
 
-// PUT /updateProductById/:id  (Admin)
+
+ 
+ // PUT /updateProductById/:id  (Admin)
 export const updateProduct = asyncHandler(async (req, res) => {
   const { id } = req.params;
 
@@ -78,6 +96,26 @@ export const updateProduct = asyncHandler(async (req, res) => {
     throw new ApiError(400, "stock cannot be negative");
   }
 
+  // Convert values (form-data sends strings)
+  if (updateData.price !== undefined) updateData.price = Number(updateData.price);
+  if (updateData.stock !== undefined) updateData.stock = Number(updateData.stock);
+  if (updateData.isActive !== undefined)
+    updateData.isActive = updateData.isActive === "true" || updateData.isActive === true;
+
+ 
+  if (req.files?.length) {
+    const imageUrls = [];
+
+    for (const file of req.files) {
+      const uploaded = await uploadOnCloudinary(file.path);
+      if (uploaded?.secure_url) {
+        imageUrls.push(uploaded.secure_url);
+      }
+    }
+
+    updateData.imageUrls = imageUrls;
+  }
+
   const product = await Product.findByIdAndUpdate(id, updateData, {
     new: true,
     runValidators: true,
@@ -91,6 +129,7 @@ export const updateProduct = asyncHandler(async (req, res) => {
     new ApiResponse(product, "Product updated successfully")
   );
 });
+
 
 // DELETE /deleteProductById/:id  (Admin)
 export const deleteProduct = asyncHandler(async (req, res) => {
