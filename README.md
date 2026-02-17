@@ -1,9 +1,10 @@
 # 🛒 Mini E-Commerce Backend API
 
-A scalable and secure RESTful backend API for a Mini E-Commerce platform
+A scalable and secure RESTful backend API for a Mini E-Commerce platform  
 built using **Node.js**, **Express.js**, and **MongoDB**.
 
-------------------------------------------------------------------------
+---
+
 ## 🚀 Features
 
 ### 🔐 Authentication & Authorization
@@ -29,158 +30,228 @@ built using **Node.js**, **Express.js**, and **MongoDB**.
 - Remove product from cart
 - Place order
 
-
-------------------------------------------------------------------------
+---
 
 ## 🏗 Tech Stack
 
--   Node.js
--   Express.js
--   MongoDB + Mongoose
--   JWT
--   bcrypt
--   Cloudinary
--   dotenv
--   Nodemon
--   multer
--   Zod
+- Node.js
+- Express.js
+- MongoDB + Mongoose
+- JWT
+- bcrypt
+- Cloudinary
+- dotenv
+- Nodemon
+- multer
+- Zod
+- Docker
 
-------------------------------------------------------------------------
+---
 
 ## 📂 Project Structure
 
-   │
+```
 ├── node_modules/
-├── public/dummydataset
-├── public/temp/ER-Diagram
+├── public/
+│   ├── dummydataset/
+│   └── temp/ER-Diagram/
 ├── src/
-│ ├── controllers/
-│ ├── db/
-│ ├── middleware/
-│ ├── models/
-│ ├── routes/
-│ ├── utils/
-│ ├── validators/
-│ ├── app.js
-│ ├── constants.js
-│ └── index.js
-------------------------------------------------------------------------
+│   ├── controllers/
+│   ├── db/
+│   ├── middleware/
+│   ├── models/
+│   ├── routes/
+│   ├── utils/
+│   ├── validators/
+│   ├── app.js
+│   ├── constants.js
+│   └── index.js
+```
 
-## ⚙ Installation & Setup
+---
 
-### 1️⃣ Clone the Repository
+# 🐳 Docker Setup (Live Deployment)
 
-``` bash
+## 1️⃣ Clone Dockerized Repository
+
+```bash
+git clone https://github.com/mazed2020/Dockerize_mini_ecommerce_backend.git
+cd Dockerize_mini_ecommerce_backend
+```
+
+## 2️⃣ Create `.env` File
+
+Create a `.env` file in the root directory:
+
+```
+MONGODB_URI=mongodb://admin:password123@mongo:27017/Mini-Ecommerce?authSource=admin
+PORT=5000
+CORS_ORIGIN=*
+
+SECRETE_KEY=your_jwt_secret
+EXPIERY_KEY=10d
+REFRESH_TOKEN_SECRE=your_refresh_secret
+REFRESH_EXPIERE=1d
+
+CLOUD_NAME=your_cloud_name
+API_KEY=your_cloudinary_key
+API_SECRET=your_cloudinary_secret
+```
+
+## 3️⃣ Build & Run Containers
+
+```bash
+docker compose up -d --build
+```
+
+---
+
+## 🌐 Access API
+
+### 🔹 Local Development
+```
+http://localhost:5001/api/v1/
+```
+
+### 🔹 VPS Deployment
+```
+http://72.61.116.162:5001/api/v1
+```
+
+ 
+
+---
+
+## 🗄 MongoDB UI (mongo-express)
+
+If enabled:
+
+```
+http://72.61.116.162:8082/
+```
+
+Default credentials:
+```
+Username: admin
+Password: pass
+```
+
+---
+
+# ⚙ Local Installation (Without Docker)
+
+## 1️⃣ Clone the Repository
+
+```bash
 git clone https://github.com/mazed2020/Mini-Ecommerce-Backend.git
 cd Mini-Ecommerce-Backend
 ```
 
-### 2️⃣ Install Dependencies
+## 2️⃣ Install Dependencies
 
-``` bash
+```bash
 npm install
 ```
 
-### 3️⃣ Create `.env` File
+## 3️⃣ Create `.env` File
 
-``` env
+```
 MONGODB_URI=mongodb://127.0.0.1:27017
 PORT=5000
 CORS_ORIGIN=*
 EXPIERY_KEY=10d
 REFRESH_TOKEN_SECRE=dfbdjbfajbsid
 REFRESH_EXPIERE=1d
+SECRETE_KEY=jKPCFPlJN9IVW9uA7KVcLIedkmM
 CLOUD_NAME=dr3lsbx2k
 API_KEY=185859713928424
-SECRETE_kEY=jKPCFPlJN9IVW9uA7KVcLIedkmM
+API_SECRET=your_cloudinary_secret
 ```
 
- 
+## 4️⃣ Run Development Server
 
-------------------------------------------------------------------------
+```bash
+npm run dev
+```
 
-## 📌 API Endpoints
+---
 
-### 🔐 Authentication
+# 📌 API Endpoints
 
-  Method   Endpoint                  Description
-  -------- ------------------------- ----------------------
-  POST     `/api/v1/auth/register`   Register new user
-  POST     `/api/v1/auth/login`      Login user
+## 🔐 Authentication
 
-------------------------------------------------------------------------
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/api/v1/auth/register` | Register new user |
+| POST | `/api/v1/auth/login` | Login user |
 
-### 📦 Products
+---
 
-  Method   Endpoint                 Description
-  -------- ------------------------ --------------------
-  GET    `/api/v1/products/getAllProducts`      Get all products (Public)
-  GET    `/api/v1/products/getProductById/:id`  Get single product by ID (Public)
-  POST   `/api/v1/products/createProduct`        Create product (Admin)
-  PUT    `/api/v1/products/updateProductById/:id`Update product by ID (Admin)
-  DELETE  `/api/v1/products/deleteProductById/:id`Delete product by ID (Admin)
+## 📦 Products
 
-------------------------------------------------------------------------
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/api/v1/products/getAllProducts` | Get all products (Public) |
+| GET | `/api/v1/products/getProductById/:id` | Get product by ID |
+| POST | `/api/v1/products/createProduct` | Create product (Admin) |
+| PUT | `/api/v1/products/updateProductById/:id` | Update product |
+| DELETE | `/api/v1/products/deleteProductById/:id` | Delete product |
 
- 
- ### 🛒 Cart
+---
 
-  Method   Endpoint                                             Description
-  -------- ------------------------------------------------------ -------------------------------
-  GET      `/api/v1/carts/getAllCardItems`                    Get all cart items
-  POST     `/api/v1/carts/addToCardItems`                        Add item to cart
-  DELETE   `/api/v1/carts/deleteItemsByProductId/:productId`   Remove cart item by product ID
-  DELETE   `/api/v1/carts/clearCart`                             Clear entire cart
+## 🛒 Cart
 
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/api/v1/carts/getAllCardItems` | Get all cart items |
+| POST | `/api/v1/carts/addToCardItems` | Add item to cart |
+| DELETE | `/api/v1/carts/deleteItemsByProductId/:productId` | Remove item |
+| DELETE | `/api/v1/carts/clearCart` | Clear cart |
 
-------------------------------------------------------------------------
+---
 
-### 📑 Orders
+## 📑 Orders
 
-  Method   Endpoint               Description
-  -------- ---------------------- ------------------
-  POST     `/api/v1/orders/checkoutOrder`             Create order (Checkout)
-  GET      `/api/v1/orders/getMyOrder`                  Get authenticated user's orders
-  GET      `/api/v1/orders/getOrderById/:id`            Get single order by ID
-  PATCH    `/api/v1/orders/:id/cancelOder`              Cancel order
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/api/v1/orders/checkoutOrder` | Checkout order |
+| GET | `/api/v1/orders/getMyOrder` | Get user's orders |
+| GET | `/api/v1/orders/getOrderById/:id` | Get order by ID |
+| PATCH | `/api/v1/orders/:id/cancelOder` | Cancel order |
 
-------------------------------------------------------------------------
+---
 
-## 🔑 Authentication
+# 🔑 Authentication
 
 Protected routes require:
 
-    Authorization: Bearer <access_token>
+```
+Authorization: Bearer <access_token>
+```
 
-------------------------------------------------------------------------
+---
 
- ## 🧪 API Testing & Documentation
+# 🧪 API Testing & Documentation
 
-The complete API documentation is available via Postman:
-
-🔗 **Live API Docs:**  
+🔗 **Live API Docs (Postman):**  
 👉 https://documenter.getpostman.com/view/34409474/2sBXcBm26C
 
-### ER-Diagram
-ER-Diagram image and mermaid code provide there
-- public/temp/
+ 
 
+---
 
-You can:
-- Explore all endpoints
-- Test requests directly
-- View request/response examples
-- Understand authentication flow
+# 👨‍💻 Author
 
-------------------------------------------------------------------------
+**Mazed**
 
-## 👨‍💻 Author
+Local Version:  
+https://github.com/mazed2020/Mini-Ecommerce-Backend
 
-**Mazed**\
-GitHub: https://github.com/mazed2020/Mini-Ecommerce-Backend.git
+Dockerized Live Version:  
+https://github.com/mazed2020/Dockerize_mini_ecommerce_backend
 
-------------------------------------------------------------------------
+---
 
-## 📄 License
+# 📄 License
 
 This project is licensed under the MIT License.
