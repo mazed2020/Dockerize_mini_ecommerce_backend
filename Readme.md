@@ -43,6 +43,7 @@ built using **Node.js**, **Express.js**, and **MongoDB**.
 -   dotenv
 -   Nodemon
 -   multer
+-   Zod
 
 ------------------------------------------------------------------------
 

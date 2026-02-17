@@ -3,9 +3,10 @@ import fs from "fs"
 
 //configaration of cloudinary
 cloudinary.config({ 
-    cloud_name:process.env.cloud_name, 
+    cloud_name:process.env.CLOUD_NAME, 
     api_key: process.env.API_KEY, 
-    api_secret:process.env.SECRETE_kEY // Click 'View API Keys' above to copy your API secret
+    
+    api_secret:process.env.SECRETE_KEY // Click 'View API Keys' above to copy your API secret
 });
 
 const uploadOnCloudinary=async(tempFilePath)=>{
